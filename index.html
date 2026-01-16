@@ -3,57 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pamebo Pinturas</title>
+  <title>Pamebo Pinturas — Soluções em Pinturas</title>
+  <meta name="description" content="Pamebo Pinturas — 30+ anos em pintura de fachadas e interiores. Orçamentos rápidos, equipe própria, segurança NR-35 e entrega no prazo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --brand-red:#e53935; /* vermelho do logo (aprox) */
-      --ink:#14212b;       /* azul-petróleo para textos escuros */
-      --teal:#1F8A70;      /* verde-azulado de apoio */
-      --bg:#F7F5F2;        /* neutro quente de fundo */
-      --light:#E6F2F6;     /* azul clarinho de respiro */
+      --brand-red:#E53935;   /* vermelho marca */
+      --ink:#14212B;         /* azul-petróleo texto */
+      --teal:#1F8A70;        /* verde-azulado apoio */
+      --bg:#F7F5F2;          /* neutro de fundo */
+      --light:#E6F2F6;       /* respiro hero */
+      --muted:#5b6a77;       /* textos secundários */
+      --card:#ffffff;        /* cartões */
+      --line:#eeeeee;        /* bordas suaves */
+      --radius:16px;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-    /* Acessibilidade base */
+    /* Acessibilidade */
     :focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-    @media (prefers-reduced-motion: no-preference){
-      html{scroll-behavior:smooth}
-    }
+    @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 
     /* Header */
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:50}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:50}
     .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
     .brand{display:flex;align-items:center;gap:.75rem}
     .brand img{height:44px;width:auto;display:block}
     .brand-title{font-family:Poppins,Inter,sans-serif;font-weight:700;letter-spacing:.2px}
 
-    /* Menu desktop */
     .menu{display:flex;align-items:center;gap:24px}
     .menu a{font-weight:600}
-    .menu a:hover{opacity:.8}
-    .whatsapp{display:flex;align-items:center;gap:.5rem;padding:.6rem .85rem;border-radius:999px;border:1px solid #e7e7e7}
-    .whatsapp svg{width:20px;height:20px}
+    .menu a:hover{opacity:.85}
+    .whatsapp{display:flex;align-items:center;gap:.6rem;padding:.6rem .9rem;border-radius:999px;border:1px solid #e7e7e7;background:#fff}
+    .whatsapp svg{width:20px;height:20px;display:block;flex-shrink:0}
 
-    /* Burger (mobile) */
     .burger{display:none;background:none;border:0;padding:10px;border-radius:8px}
     .burger span{display:block;width:24px;height:2px;background:#222;margin:5px 0;border-radius:2px}
 
-    /* Menu móvel */
+    /* Mobile menu */
     @media (max-width: 980px){
       .burger{display:block}
-      .menu{position:fixed;inset:72px 0 auto 0;background:#fff;border-bottom:1px solid #eee;display:none;flex-direction:column;padding:14px 20px;gap:14px}
+      .menu{position:fixed;inset:72px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);display:none;flex-direction:column;padding:14px 20px;gap:14px}
       .menu.open{display:flex}
     }
 
     /* Hero */
     .hero{position:relative;background:linear-gradient(180deg,#fff 0%,var(--light) 100%)}
-    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:56px 0}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:56px 20px}
     .eyebrow{color:var(--teal);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
     .h1{font-family:Poppins,Inter,sans-serif;font-weight:700;font-size:clamp(28px,4vw,42px);line-height:1.15;margin:.35rem 0 1rem}
     .sub{font-size:1.05rem;color:#3a4a57}
@@ -62,46 +65,54 @@
     .btn-primary{background:var(--brand-red);color:#fff}
     .btn-outline{border:2px solid var(--ink)}
 
-    /* Line-art SVG box (placeholder) */
-    .lineart{background:#fff;border:1px solid #eee;border-radius:16px;padding:12px;box-shadow:0 6px 24px rgba(20,33,43,.06)}
-    .lineart svg{width:100%;height:auto;display:block}
+    .lineart{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:0 6px 24px rgba(20,33,43,.06)}
 
     /* KPIs */
-    .kpis{background:#fff}
-    .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:28px 0}
-    .kpi{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px;text-align:center;box-shadow:0 6px 24px rgba(20,33,43,.04)}
+    .kpis{background:#fff;padding:28px 20px}
+    .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .kpi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;text-align:center;box-shadow:0 6px 24px rgba(20,33,43,.04)}
     .kpi .num{font-family:Poppins,Inter,sans-serif;font-size:clamp(26px,3.2vw,36px);font-weight:700}
-    .kpi .legend{color:#5b6a77;font-size:.95rem;margin-top:4px}
+    .kpi .legend{color:var(--muted);font-size:.95rem;margin-top:4px}
 
-    /* Obras (placeholder de decisão) */
-    section[id="obras"] .placeholder{border:2px dashed #cbd5e1;border-radius:16px;padding:24px;color:#64748b;background:#fff}
+    /* Obras */
+    section[id="obras"]{padding:34px 20px}
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
+    .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .9rem;cursor:pointer;font-weight:600}
+    .chip.active{background:var(--ink);color:#fff}
+    .grid-obras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .obra{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .thumb{aspect-ratio:4/3;background:#fafafa;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:600}
+    .obra-info{padding:12px 14px}
+    .obra-info h3{margin:.2rem 0 .2rem;font-size:1.05rem}
+    .obra-info small{color:var(--muted)}
+    .placeholder{border:2px dashed #cbd5e1;border-radius:var(--radius);padding:24px;color:#64748b;background:#fff}
 
     /* Serviços */
+    #servicos{padding:34px 20px}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px;box-shadow:0 6px 24px rgba(20,33,43,.04)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 6px 24px rgba(20,33,43,.04)}
     .card h3{font-family:Poppins,Inter,sans-serif;margin:.5rem 0}
     .card ul{margin:.25rem 0 0 1.1rem}
 
-    /* Missão/Visão/Valores */
-    .mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .mvv .item{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px}
+    /* MVV */
+    .mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:34px 20px}
+    .mvv .item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
 
-    /* Parceiros: carrossel que anda sozinho e pausa no hover */
-    .partners-wrap{background:#fff;border-top:1px solid #eee;border-bottom:1px solid #eee}
+    /* Parceiros */
+    .partners-wrap{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 20px}
     .marquee{position:relative;overflow:hidden}
     .marquee-track{display:flex;gap:36px;align-items:center;white-space:nowrap;animation:scroll 28s linear infinite}
     .marquee:hover .marquee-track,.marquee:focus-within .marquee-track{animation-play-state:paused}
-    .partner{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border:1px solid #eee;border-radius:12px;background:#fff;min-width:160px;min-height:72px}
+    .partner{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border:1px solid var(--line);border-radius:12px;background:#fff;min-width:160px;min-height:72px}
     .partner img{max-height:44px;max-width:140px;filter:grayscale(10%);opacity:.95}
     @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    @media (prefers-reduced-motion: reduce){
-      .marquee-track{animation:none}
-    }
+    @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
-    /* Contato: mapa + form */
+    /* Contato */
+    #contato{padding:34px 20px}
     .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-    .map{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden}
-    .form{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px}
+    .map{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
     .form label{display:block;font-weight:600;margin:.5rem 0 .25rem}
     .form input,.form select,.form textarea{width:100%;padding:1rem;border:1px solid #d9d9d9;border-radius:10px}
     .form button{margin-top:10px}
@@ -113,13 +124,14 @@
 
     /* Footer */
     footer{background:#0f1720;color:#ecf0f4;margin-top:36px}
-    .footer-inner{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:22px 0}
+    .footer-inner{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:22px 20px}
     .footer-contact{display:flex;gap:18px;flex-wrap:wrap}
 
     /* Responsivo */
     @media (max-width: 980px){
-      .hero-inner{grid-template-columns:1fr}
+      .hero-inner{grid-template-columns:1fr;padding:40px 24px}
       .kpi-grid{grid-template-columns:repeat(2,1fr)}
+      .grid-obras{grid-template-columns:repeat(2,1fr)}
       .cards{grid-template-columns:1fr}
       .mvv{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
@@ -127,6 +139,8 @@
     }
     @media (max-width: 560px){
       .kpi-grid{grid-template-columns:1fr}
+      .grid-obras{grid-template-columns:1fr}
+      .hero-inner{padding:32px 20px}
     }
   </style>
 </head>
@@ -135,7 +149,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Pamebo Pinturas – início">
-        <img src="logo.jpg" alt="Pamebo Pinturas" onerror="this.style.display='none'"/>
+        <img src="logo.jpg" alt="Pamebo Pinturas"/>
         <span class="brand-title">PAMEBO PINTURAS</span>
       </a>
       <button class="burger" aria-label="Abrir menu" aria-controls="mainmenu" aria-expanded="false">
@@ -146,7 +160,10 @@
         <a href="#obras">Obras</a>
         <a href="#contato">Contato</a>
         <a class="whatsapp" href="https://wa.me/5511994574252" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M26.6 5.4A13 13 0 0 0 5.3 26.7L2 30l3.6-.9A13 13 0 0 0 30 16c0-3.5-1.4-6.8-3.9-9.2ZM16 27.1c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-2.5.6.7-2.4-.2-.5a11 11 0 1 1 8.3 4.2Zm6.1-8.2c-.3-.1-1.9-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.4-.5-2.6-1.6a9.7 9.7 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.6l.3-.3c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6L14 5.9c-.1-.3-.3-.4-.6-.4h-.5c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5 0 1.4 1.1 2.8 1.2 3 .1.2 2.2 3.4 5.3 4.8 3.2 1.4 3.2.9 3.8.8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.1-.5-.2Z" fill="#25D366"/></svg>
+          <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="12" fill="#25D366"/>
+            <path fill="#fff" d="M17.2 14.3c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.6.1l-.6.7c-.2.2-.3.2-.5.1-.2-.1-.9-.4-1.7-1.1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.1-.2-.2-.3-.4-.3h-.4c-.1 0-.3 0-.5.2-.2.2-.7.7-.7 1.7s.7 1.9.8 2c.1.1 1.4 2.2 3.4 3 .5.2.9.3 1.2.4.5.2.9.2 1.2.1.4-.1 1.3-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.1-.4-.2z"/>
+          </svg>
           <span>WhatsApp</span>
         </a>
       </nav>
@@ -166,25 +183,20 @@
         </div>
       </div>
       <div class="lineart" aria-hidden="true">
-        <!-- Ilustração linear (SVG simples de 2 pintores em fachada) -->
+        <!-- Ilustração linear -->
         <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" stroke="#14212b" stroke-width="3" fill="none">
           <rect x="30" y="30" width="280" height="360" rx="14" opacity=".2"/>
           <rect x="330" y="60" width="280" height="330" rx="14" opacity=".2"/>
-          <!-- andaime -->
           <path d="M60 240 H280 M60 180 H280 M60 300 H280 M90 140 V340 M250 140 V340"/>
-          <!-- pintor 1 -->
           <circle cx="140" cy="170" r="18"/>
           <path d="M140 188 v40 m-22 16 l22-16 22 16 M118 228 h44"/>
           <path d="M162 228 l26 -22 m-78 22 l-24 -18"/>
           <rect x="176" y="186" width="20" height="28" rx="6"/>
-          <!-- rolo tinta -->
           <path d="M196 192 h34 v10 h-34 m34 5 v22"/>
-          <!-- pintor 2 -->
           <circle cx="420" cy="200" r="18"/>
           <path d="M420 218 v42 m-22 16 l22-16 22 16 M398 258 h44"/>
           <rect x="456" y="196" width="20" height="28" rx="6"/>
           <path d="M476 202 h34 v10 h-34 m34 5 v22"/>
-          <!-- fachada linhas -->
           <path d="M360 90 h200 M360 130 h200 M360 170 h200 M360 210 h200 M360 250 h200 M360 290 h200 M360 330 h200" opacity=".25"/>
         </svg>
       </div>
@@ -201,16 +213,48 @@
     </div>
   </section>
 
-  <!-- Obras (placeholder até definirmos a experiência) -->
-  <section id="obras" class="container" style="padding:34px 20px">
+  <!-- Obras -->
+  <section id="obras" class="container">
     <h2 class="h1" style="font-size:clamp(22px,3vw,32px)">Obras</h2>
-    <div class="placeholder">
-      Sem imagens por enquanto. Podemos seguir com: <strong>(a)</strong> grade com filtros + lightbox; <strong>(b)</strong> página de cases com antes/depois; <strong>(c)</strong> mapa de obras por região. Diga sua preferência que eu implemento.
+    <div class="filters" role="tablist" aria-label="Filtros de obras">
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">Todas</button>
+      <button class="chip" data-filter="fachada" role="tab">Fachadas</button>
+      <button class="chip" data-filter="interna" role="tab">Internas</button>
+      <button class="chip" data-filter="comercial" role="tab">Comercial</button>
+      <button class="chip" data-filter="residencial" role="tab">Residencial</button>
     </div>
+    <div class="grid-obras" id="gridObras">
+      <!-- Placeholders (substituir por fotos reais depois) -->
+      <article class="obra" data-cat="fachada">
+        <div class="thumb">Foto da obra</div>
+        <div class="obra-info"><h3>Edifício Atlântico</h3><small>Fachada • Santos/SP • 2024</small></div>
+      </article>
+      <article class="obra" data-cat="interna">
+        <div class="thumb">Foto da obra</div>
+        <div class="obra-info"><h3>Residência Jardim</h3><small>Interna • São Paulo/SP • 2023</small></div>
+      </article>
+      <article class="obra" data-cat="comercial">
+        <div class="thumb">Foto da obra</div>
+        <div class="obra-info"><h3>Centro Comercial Beta</h3><small>Comercial • Guarulhos/SP • 2023</small></div>
+      </article>
+      <article class="obra" data-cat="residencial">
+        <div class="thumb">Foto da obra</div>
+        <div class="obra-info"><h3>Condomínio Vale Verde</h3><small>Residencial • Campinas/SP • 2022</small></div>
+      </article>
+      <article class="obra" data-cat="fachada">
+        <div class="thumb">Foto da obra</div>
+        <div class="obra-info"><h3>Edifício Horizonte</h3><small>Fachada • São Bernardo/SP • 2022</small></div>
+      </article>
+      <article class="obra" data-cat="comercial">
+        <div class="thumb">Foto da obra</div>
+        <div class="obra-info"><h3>Loja Centro</h3><small>Comercial • Santo André/SP • 2021</small></div>
+      </article>
+    </div>
+    <div class="placeholder" style="margin-top:18px">Sem imagens reais por enquanto. Quando você enviar as fotos, eu troco os placeholders e ativo um **lightbox** nas miniaturas.</div>
   </section>
 
   <!-- Serviços -->
-  <section id="servicos" class="container" style="padding:8px 20px 34px">
+  <section id="servicos" class="container">
     <h2 class="h1" style="font-size:clamp(22px,3vw,32px)">Serviços</h2>
     <div class="cards">
       <article class="card">
@@ -241,35 +285,33 @@
   </section>
 
   <!-- Missão, Visão, Valores -->
-  <section class="container" style="padding:8px 20px 34px">
-    <div class="mvv">
-      <div class="item"><h3>Missão</h3><p>Entregar pintura de alta qualidade com segurança e respeito ao prazo, valorizando o patrimônio dos clientes.</p></div>
-      <div class="item"><h3>Visão</h3><p>Ser referência regional em pintura predial e manutenção, reconhecida pela excelência técnica e atendimento.</p></div>
-      <div class="item"><h3>Valores</h3><p>Segurança, transparência, qualidade, responsabilidade ambiental e relacionamento de longo prazo.</p></div>
-    </div>
+  <section class="mvv container">
+    <div class="item"><h3>Missão</h3><p>Entregar pintura de alta qualidade com segurança e respeito ao prazo, valorizando o patrimônio dos clientes.</p></div>
+    <div class="item"><h3>Visão</h3><p>Ser referência regional em pintura predial e manutenção, reconhecida pela excelência técnica e atendimento.</p></div>
+    <div class="item"><h3>Valores</h3><p>Segurança, transparência, qualidade, responsabilidade ambiental e relacionamento de longo prazo.</p></div>
   </section>
 
-  <!-- Parceiros (carrossel auto-rolagem) -->
+  <!-- Parceiros -->
   <section aria-label="Parceiros" class="partners-wrap">
-    <div class="container" style="padding:22px 0">
+    <div class="container">
       <div class="marquee" aria-live="off">
         <div class="marquee-track" id="partnersTrack">
-          <!-- Duplicamos a sequência para efeito de loop contínuo -->
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="sherwin.png" alt="Sherwin-Williams"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="atlas.png" alt="Atlas"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="coral.png" alt="Coral"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="karcher.png" alt="Kärcher"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="suvinil.png" alt="Suvinil"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="tigre.png" alt="Tigre"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="sika.png" alt="Sika"/></a>
+          <!-- Sequência + clone para loop -->
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="7.png" alt="Sherwin-Williams" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="1.png" alt="Atlas" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="2.png" alt="Coral" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="3.png" alt="Kärcher" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="4.png" alt="Suvinil" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="5.png" alt="Tigre" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="6.png" alt="Sika" loading="lazy"/></a>
           <!-- clone -->
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="sherwin.png" alt="Sherwin-Williams"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="atlas.png" alt="Atlas"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="coral.png" alt="Coral"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="karcher.png" alt="Kärcher"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="suvinil.png" alt="Suvinil"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="tigre.png" alt="Tigre"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src="sika.png" alt="Sika"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="7.png" alt="Sherwin-Williams" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="1.png" alt="Atlas" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="2.png" alt="Coral" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="3.png" alt="Kärcher" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="4.png" alt="Suvinil" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="5.png" alt="Tigre" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="6.png" alt="Sika" loading="lazy"/></a>
         </div>
       </div>
       <small style="display:block;color:#6b7a88;margin-top:10px">Passe o mouse para pausar. Toque para interagir no mobile.</small>
@@ -277,29 +319,28 @@
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="container" style="padding:28px 20px">
+  <section id="contato" class="container">
     <h2 class="h1" style="font-size:clamp(22px,3vw,32px)">Contato & Orçamentos</h2>
     <div class="contact-grid">
       <div class="map" aria-label="Mapa da Pamebo Pinturas">
-        <!-- Substitua a src do maps pelo endereço real -->
         <iframe title="Localização Pamebo Pinturas" src="https://www.google.com/maps?q=São+Paulo&output=embed" width="100%" height="420" style="border:0" loading="lazy"></iframe>
       </div>
-      <form class="form" onsubmit="event.preventDefault();alert('Obrigado! Em breve entraremos em contato.');this.reset();">
+      <form class="form" id="orcamentoForm">
         <label for="nome">Nome</label>
-        <input id="nome" required placeholder="Seu nome"/>
+        <input id="nome" name="nome" required placeholder="Seu nome"/>
         <label for="email">E-mail</label>
-        <input id="email" type="email" required placeholder="voce@email.com"/>
+        <input id="email" name="email" type="email" required placeholder="voce@email.com"/>
         <label for="fone">Telefone / WhatsApp</label>
-        <input id="fone" placeholder="(11) 9 0000-0000"/>
+        <input id="fone" name="fone" placeholder="(11) 9 0000-0000"/>
         <label for="tipo">Tipo de serviço</label>
-        <select id="tipo">
+        <select id="tipo" name="tipo">
           <option>Pintura de fachada</option>
           <option>Pintura interna</option>
           <option>Tratamento/impermeabilização</option>
           <option>Outro</option>
         </select>
         <label for="msg">Mensagem</label>
-        <textarea id="msg" rows="4" placeholder="Fale um pouco sobre a sua demanda"></textarea>
+        <textarea id="msg" name="mensagem" rows="4" placeholder="Fale um pouco sobre a sua demanda"></textarea>
         <label style="display:flex;gap:.5rem;align-items:center;margin-top:.75rem">
           <input type="checkbox" required /> Concordo em ser contatado e entendo a política de privacidade.
         </label>
@@ -309,6 +350,18 @@
     </div>
   </section>
 
+  <!-- WhatsApp flutuante (mobile) -->
+  <div class="fab-wa">
+    <a href="https://wa.me/5511994574252" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+      <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="12" fill="#25D366"/>
+        <path fill="#fff" d="M17.2 14.3c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.6.1l-.6.7c-.2.2-.3.2-.5.1-.2-.1-.9-.4-1.7-1.1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.1-.2-.2-.3-.4-.3h-.4c-.1 0-.3 0-.5.2-.2.2-.7.7-.7 1.7s.7 1.9.8 2c.1.1 1.4 2.2 3.4 3 .5.2.9.3 1.2.4.5.2.9.2 1.2.1.4-.1 1.3-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.1-.4-.2z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> Pamebo Pinturas — Soluções em Pinturas</div>
@@ -323,29 +376,17 @@
   </footer>
 
   <script>
-    // Atualiza ano no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <div class="fab-wa">
-    <a href="https://wa.me/5511994574252" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M26.6 5.4A13 13 0 0 0 5.3 26.7L2 30l3.6-.9A13 13 0 0 0 30 16c0-3.5-1.4-6.8-3.9-9.2ZM16 27.1c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-2.5.6.7-2.4-.2-.5a11 11 0 1 1 8.3 4.2Zm6.1-8.2c-.3-.1-1.9-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.4-.5-2.6-1.6a9.7 9.7 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.6l.3-.3c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6L14 5.9c-.1-.3-.3-.4-.6-.4h-.5c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5 0 1.4 1.1 2.8 1.2 3 .1.2 2.2 3.4 5.3 4.8 3.2 1.4 3.2.9 3.8.8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.1-.5-.2Z" fill="#fff"/></svg>
-      <span>WhatsApp</span>
-    </a>
-  </div>
-
-  <script>
-    // Atualiza ano no rodapé
+    // Ano no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Menu móvel acessível
     const burger = document.querySelector('.burger');
     const menu = document.getElementById('mainmenu');
-    if(burger && menu){
+    if (burger && menu){
       burger.addEventListener('click', () => {
         const open = menu.classList.toggle('open');
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
-      // Fecha menu ao clicar num link (melhor UX mobile)
       menu.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', ()=>{
         if(menu.classList.contains('open')){
           menu.classList.remove('open');
@@ -353,6 +394,25 @@
         }
       }));
     }
+
+    // Filtros de obras (placeholder)
+    const chips = document.querySelectorAll('.chip');
+    const items = document.querySelectorAll('.obra');
+    chips.forEach(chip => chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      items.forEach(it => {
+        it.style.display = (f === 'all' || it.dataset.cat === f) ? '' : 'none';
+      });
+    }));
+
+    // Formulário (demonstração)
+    document.getElementById('orcamentoForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Obrigado! Sua solicitação foi enviada. Em breve entraremos em contato.');
+      e.target.reset();
+    });
   </script>
 </body>
 </html>
