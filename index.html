@@ -41,9 +41,10 @@
     .menu{display:flex;align-items:center;gap:24px}
     .menu a{font-weight:600}
     .menu a:hover{opacity:.85}
-    .whatsapp{display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;border-radius:999px;border:1px solid #e7e7e7;background:#fff}
-    .wa-logo{width:22px;height:22px;border-radius:999px;display:block;flex-shrink:0;object-fit:cover}
-    .fab-wa .wa-logo{width:20px;height:20px}
+    .whatsapp{display:flex;align-items:center;gap:.6rem;padding:.55rem .95rem;border-radius:999px;border:1px solid #e7e7e7;background:#fff;line-height:1}
+    .whatsapp span{font-weight:700}
+    .wa-logo{width:24px;height:24px;border-radius:999px;display:block;flex-shrink:0;object-fit:cover}
+    .fab-wa .wa-logo{width:24px;height:24px}
     .whatsapp svg{display:none}/* legacy */
 
     .burger{display:none;background:none;border:0;padding:10px;border-radius:8px}
@@ -147,11 +148,12 @@
   </style>
 </head>
 <body>
+  <!-- VERSIONAMENTO: v0.6 | 2026-01-19 | Ajuste botão WhatsApp (ícone oficial em PNG), seção Parceiros revertida -->
   <!-- Header -->
   <header>
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Pamebo Pinturas – início">
-        <img src="logo.png" alt="Pamebo Pinturas"/>
+        <img src="logo.jpg" alt="Pamebo Pinturas"/>
         <span class="brand-title">PAMEBO PINTURAS</span>
       </a>
       <button class="burger" aria-label="Abrir menu" aria-controls="mainmenu" aria-expanded="false">
@@ -162,7 +164,7 @@
         <a href="#obras">Obras</a>
         <a href="#contato">Contato</a>
         <a class="whatsapp"$1>
-          <img class="wa-logo" src="fe3da5d6-a336-4ca7-8920-179d5bb9033a.png" alt="WhatsApp" loading="lazy" />
+          <img class="wa-logo" src="d1cf3ea8-094c-45bd-bb73-6edbeab7a456.png" alt="WhatsApp" loading="lazy" />
           <span>WhatsApp</span>
         </a>
       </nav>
@@ -287,7 +289,20 @@
           <a class="partner" href="#" target="_blank" rel="noopener"><img src="3.png" alt="Kärcher" loading="lazy"/></a>
           <a class="partner" href="#" target="_blank" rel="noopener"><img src="4.png" alt="Suvinil" loading="lazy"/></a>
           <a class="partner" href="#" target="_blank" rel="noopener"><img src="5.png" alt="Tigre" loading="lazy"/></a>
-          <a class="partner" href="#" target="_blank" rel="noopener"><img src=
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="6.png" alt="Sika" loading="lazy"/></a>
+          <!-- clone -->
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="7.png" alt="Sherwin-Williams" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="1.png" alt="Atlas" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="2.png" alt="Coral" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="3.png" alt="Kärcher" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="4.png" alt="Suvinil" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="5.png" alt="Tigre" loading="lazy"/></a>
+          <a class="partner" href="#" target="_blank" rel="noopener"><img src="6.png" alt="Sika" loading="lazy"/></a>
+        </div>
+      </div>
+      <small style="display:block;color:#6b7a88;margin-top:10px">Passe o mouse para pausar. Toque para interagir no mobile.</small>
+    </div>
+  </section>
 
   <!-- Contato -->
   <section id="contato" class="container">
@@ -324,7 +339,7 @@
   <!-- WhatsApp flutuante (mobile) -->
   <div class="fab-wa">
     <a$1>
-      <img class="wa-logo" src="fe3da5d6-a336-4ca7-8920-179d5bb9033a.png" alt="WhatsApp" loading="lazy" />
+      <img class="wa-logo" src="d1cf3ea8-094c-45bd-bb73-6edbeab7a456.png" alt="WhatsApp" loading="lazy" />
       <span>WhatsApp</span>
     </a>
   </div>
@@ -384,4 +399,3 @@
   </script>
 </body>
 </html>
-
