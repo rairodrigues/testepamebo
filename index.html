@@ -52,86 +52,6 @@
 
     /* Mobile menu */
     @media (max-width: 980px){
-      .burger{display:block}
-      .menu{position:fixed;inset:72px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);display:none;flex-direction:column;padding:14px 20px;gap:14px}
-      .menu.open{display:flex}
-    }
-
-    /* Hero */
-    .hero{position:relative;background:linear-gradient(180deg,#fff 0%,var(--light) 100%)}
-    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:56px 20px}
-    .eyebrow{color:var(--teal);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-    .h1{font-family:Poppins,Inter,sans-serif;font-weight:700;font-size:clamp(28px,4vw,42px);line-height:1.15;margin:.35rem 0 1rem}
-    .sub{font-size:1.05rem;color:#3a4a57}
-    .cta-row{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 1.15rem;border-radius:12px;font-weight:700}
-    .btn-primary{background:var(--brand-red);color:#fff}
-    .btn-outline{border:2px solid var(--ink)}
-
-    .lineart{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:0 6px 24px rgba(20,33,43,.06)}
-
-    /* KPIs */
-    .kpis{background:#fff;padding:28px 20px}
-    .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .kpi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;text-align:center;box-shadow:0 6px 24px rgba(20,33,43,.04)}
-    .kpi .num{font-family:Poppins,Inter,sans-serif;font-size:clamp(26px,3.2vw,36px);font-weight:700}
-    .kpi .legend{color:var(--muted);font-size:.95rem;margin-top:4px}
-
-    /* Obras */
-    section[id="obras"]{padding:34px 20px}
-    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
-    .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .9rem;cursor:pointer;font-weight:600}
-    .chip.active{background:var(--ink);color:#fff}
-    .grid-obras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .obra{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-    .thumb{aspect-ratio:4/3;background:#fafafa;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:600}
-    .obra-info{padding:12px 14px}
-    .obra-info h3{margin:.2rem 0 .2rem;font-size:1.05rem}
-    .obra-info small{color:var(--muted)}
-    .placeholder{border:2px dashed #cbd5e1;border-radius:var(--radius);padding:24px;color:#64748b;background:#fff}
-
-    /* Serviços */
-    #servicos{padding:34px 20px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 6px 24px rgba(20,33,43,.04)}
-    .card h3{font-family:Poppins,Inter,sans-serif;margin:.5rem 0}
-    .card ul{margin:.25rem 0 0 1.1rem}
-
-    /* MVV */
-    .mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:34px 20px}
-    .mvv .item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-
-    /* Parceiros */
-    .partners-wrap{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 20px}
-    .marquee{position:relative;overflow:hidden}
-    .marquee-track{display:flex;gap:36px;align-items:center;white-space:nowrap;animation:scroll 28s linear infinite}
-    .marquee:hover .marquee-track,.marquee:focus-within .marquee-track{animation-play-state:paused}
-    .partner{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border:1px solid var(--line);border-radius:12px;background:#fff;min-width:160px;min-height:72px}
-    .partner img{max-height:44px;max-width:140px;filter:grayscale(10%);opacity:.95}
-    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
-
-    /* Contato */
-    #contato{padding:34px 20px}
-    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-    .map{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-    .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-    .form label{display:block;font-weight:600;margin:.5rem 0 .25rem}
-    .form input,.form select,.form textarea{width:100%;padding:1rem;border:1px solid #d9d9d9;border-radius:10px}
-    .form button{margin-top:10px}
-
-    /* WhatsApp flutuante (mobile) */
-    .fab-wa{position:fixed;right:16px;bottom:16px;z-index:60;display:none}
-    .fab-wa a{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.9rem 1rem;border-radius:999px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.15)}
-    .fab-wa svg{display:none}/* legacy */
-
-    /* Footer */
-    footer{background:#0f1720;color:#ecf0f4;margin-top:36px}
-    .footer-inner{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:22px 20px}
-    .footer-contact{display:flex;gap:18px;flex-wrap:wrap}
-
-    /* Responsivo */
-    @media (max-width: 980px){
       .hero-inner{grid-template-columns:1fr;padding:40px 24px}
       .kpi-grid{grid-template-columns:repeat(2,1fr)}
       .grid-obras{grid-template-columns:repeat(2,1fr)}
@@ -139,6 +59,7 @@
       .mvv{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
       .fab-wa{display:block}
+      .menu .whatsapp{display:none}
     }
     @media (max-width: 560px){
       .kpi-grid{grid-template-columns:1fr}
@@ -148,7 +69,7 @@
   </style>
 </head>
 <body>
-  <!-- VERSIONAMENTO: v0.6 | 2026-01-19 | Ajuste botão WhatsApp (ícone oficial em PNG), seção Parceiros revertida -->
+  <!-- VERSIONAMENTO: v0.8 | 2026-01-19 | WhatsApp: link com mensagem + esconde botão topo no mobile -->
   <!-- Header -->
   <header>
     <div class="container nav">
@@ -164,7 +85,7 @@
         <a href="#obras">Obras</a>
         <a href="#contato">Contato</a>
         <a class="whatsapp"$1>
-          <img class="wa-logo" src="d1cf3ea8-094c-45bd-bb73-6edbeab7a456.png" alt="WhatsApp" loading="lazy" />
+          <img class="wa-logo" src="whatsapp.png" alt="WhatsApp" loading="lazy" />
           <span>WhatsApp</span>
         </a>
       </nav>
@@ -331,7 +252,7 @@
           <input type="checkbox" required /> Concordo em ser contatado e entendo a política de privacidade.
         </label>
         <button class="btn btn-primary" type="submit">Enviar orçamento</button>
-        <a class="btn btn-outline" style="margin-left:8px" href="https://wa.me/5511994574252" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn-outline" style="margin-left:8px" href="https://wa.me/5511994574252?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20pintura." target="_blank" rel="noopener">Chamar no WhatsApp</a>
       </form>
     </div>
   </section>
@@ -339,7 +260,7 @@
   <!-- WhatsApp flutuante (mobile) -->
   <div class="fab-wa">
     <a$1>
-      <img class="wa-logo" src="d1cf3ea8-094c-45bd-bb73-6edbeab7a456.png" alt="WhatsApp" loading="lazy" />
+      <img class="wa-logo" src="whatsapp.png" alt="WhatsApp" loading="lazy" />
       <span>WhatsApp</span>
     </a>
   </div>
@@ -353,7 +274,7 @@
         <span>•</span>
         <a href="tel:+5511994574252">(11) 99457-4252</a>
         <span>•</span>
-        <a href="https://wa.me/5511994574252" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/5511994574252?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20pintura." target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </footer>
